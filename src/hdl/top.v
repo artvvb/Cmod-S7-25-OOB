@@ -74,6 +74,7 @@ module top (
     ) m_uart_tx (
         .clk(clk),
         .btn(db_btn),
-        .tx(tx)
+        .tx(tx),
+        .busy()
     );
 endmodule

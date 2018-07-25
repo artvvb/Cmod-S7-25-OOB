@@ -84,3 +84,10 @@ set_property -dict { PACKAGE_PIN L12   IOSTANDARD LVCMOS33 } [get_ports { tx }];
 #set_property -dict { PACKAGE_PIN H15   IOSTANDARD LVCMOS33 } [get_ports { qspi_dq[1] }]; #IO_L1N_T0_D01_DIN_14 Sch=qspi_dq[1]
 #set_property -dict { PACKAGE_PIN J12   IOSTANDARD LVCMOS33 } [get_ports { qspi_dq[2] }]; #IO_L2P_T0_D02_14 Sch=qspi_dq[2]
 #set_property -dict { PACKAGE_PIN K13   IOSTANDARD LVCMOS33 } [get_ports { qspi_dq[3] }]; #IO_L2N_T0_D03_14 Sch=qspi_dq[3]
+
+## Configuration options, can be used for all designs
+set_property BITSTREAM.CONFIG.CONFIGRATE 50 [current_design]
+set_property CONFIG_VOLTAGE 3.3 [current_design]
+set_property CFGBVS VCCO [current_design]
+set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
+set_property CONFIG_MODE SPIx4 [current_design]
