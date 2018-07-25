@@ -18,7 +18,6 @@
 proj/*
 
 # ip repository
-
 repo/**
 !repo/vivado-library
 repo/vivado-library/**
@@ -46,24 +45,10 @@ src/ip/**
 src/other/**
 !src/other/**
 
-# sdk workspace: edit this section to provide the correct names for APPLICATION, BSP, and HW_PLATFORM
+# sdk application sources
 sdk/**
-!sdk/APPLICATION
-sdk/APPLICATION/**
-!sdk/APPLICATION/.project
-!sdk/APPLICATION/.cproject
-!sdk/APPLICATION/src
-!sdk/APPLICATION/src/**
-!sdk/BSP
-sdk/BSP/**
-!sdk/BSP/.project
-!sdk/BSP/.cproject
-!sdk/BSP/.sdkproject
-!sdk/BSP/system.mss
-!sdk/BSP/Makefile
-!sdk/HW_PLATFORM
-sdk/HW_PLATFORM/**
-!sdk/HW_PLATFORM/.project
+!sdk/appsrc
+!sdk/appsrc/**
 
 # version controlled sources
 !src/bd/system.tcl
@@ -75,9 +60,6 @@ src/hdl/*
 src/ip/*/**
 !src/ip/*/*.xci
 !src/others/*
-
-# scripts submodule
-digilent-vivado-scripts/*
 
 # maintain required directories
 !**/.keep

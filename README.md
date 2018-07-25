@@ -1,17 +1,29 @@
-This project is a a simple Verilog demo using the Cmod S7-25's LEDs, RGB LED, buttons, and USB-UART bridge. When programmed onto a board, the RGB LED will cycle from Blue to Green to Red to Black. The other LEDs will light up in sequence. Whenever one of the two buttons is pressed, "Button # Pressed!" is sent to a connected PC using the USB-UART bridge.
+Cmod S7-25 Out-of-Box Demo
+==============
 
-To receive messages from the demo, the Cmod S7 must be connected to a host PC using a micro USB cable. A serial terminal application, such as [TeraTerm](https://ttssh2.osdn.jp/index.html.en) should be used to view these messages. The UART connection is configured as 9600 baud, 2 stop bits, no parity.
+Introduction
+--------------
+This project is a simple Verilog demo using the Cmod S7-25's LEDs, RGB LED, buttons, and USB-UART bridge. When programmed onto a board, the RGB LED will cycle from Blue to Green to Red to Black. The other LEDs will light up in sequence. Whenever one of the two buttons is pressed, "Button # Pressed!" is sent to a connected PC using the USB-UART bridge.
 
-WARNING!!! This project is only supported in the 2017.4 version of Vivado.
+Using This Demo
+--------------
+Requirements:
+* [Cmod S7-25](https://store.digilentinc.com/cmod-s7-breadboardable-spartan-7-fpga-module/)
+* [Vivado 2018.2 Installation](https://reference.digilentinc.com/vivado/installing-vivado/start)
+* [Tera Term Installation](https://ttssh2.osdn.jp/index.html.en) or other serial terminal application
+* MicroUSB Cable
 
-In order to program the project onto an FPGA:
+Release Usage:
 
-1. 	Download the most recent release ZIP archive (not the source ZIP) from the repo's [releases page](https://github.com/Digilent/Cmod-S7-25-OOB/releases).
+1. Download and extract the release ZIP archive.
+2. Open project in Vivado 2018.2 (\<archive extracted location\>/vivado_proj/Zybo-Z7-20-DMA.xpr).
+3. In the *Flow Navigator* panel to the left of the Vivado window, click "Open Hardware Manager".
+4. Plug a Cmod S7-25 into the computer running Vivado using a MicroUSB cable.
+5. Open a serial terminal application (such as TeraTerm FIXME LINK) and connect it to the Cmod S7's serial port, using a baud rate of 9600.
+6. Click "Open target" in the green bar at the top of the window. Select "Auto connect" from the drop down menu.
+7. Click "Program device" in the green bar at the top of the window. In the "Program Device" wizard, enter "\<archive extracted location\>vivado_proj/Cmod-S7-25-OOB.runs/impl_1/top.bit" into the "Bitstream file" field. Then click *Program*.
+8. The demo will now be programmed onto the Cmod S7. Refer to the *Introduction* section of this README for more information on how to use it. The demo can be modified through the Vivado *Proejct Manager*.
 
-2. 	Extract and open the downloaded ZIP. Double click on "Cmod-S7-25-OOB.xpr". This will launch an archived version of the project, in which a bitstream has already been generated.
+<!--- FIXME Tera Term ... --->
 
-3. 	Open the Vivado Hardware Manager, select "Open Target", and find the target board.
-
-4.  Program top.bit, found in the Cmod-S7-25-OOB.runs/impl_1/ subdirectory of the extracted archive, onto the target.
-
-For more information on how this project is version controlled, see the [digilent-vivado-scripts repo](https://github.com/artvvb/digilent-vivado-scripts), which contains several Python and TCL scripts for maintaining a Vivado project on Github.
+For more information on how this project is version controlled refer to the [Digilent Vivado Scripts Repository](https://github.com/artvvb/digilent-vivado-scripts)
