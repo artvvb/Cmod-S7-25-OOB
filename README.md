@@ -16,7 +16,7 @@ Requirements:
 Release Usage:
 
 1. Download and extract the release ZIP archive.
-2. Open project in Vivado 2018.2 (\<archive extracted location\>/vivado_proj/Zybo-Z7-20-DMA.xpr).
+2. Open project in Vivado 2018.2 (\<archive extracted location\>/vivado_proj/Cmod-S7-25-OOB.xpr).
 3. In the *Flow Navigator* panel to the left of the Vivado window, click "Open Hardware Manager".
 4. Plug a Cmod S7-25 into the computer running Vivado using a MicroUSB cable.
 5. Open a serial terminal application (such as TeraTerm FIXME LINK) and connect it to the Cmod S7's serial port, using a baud rate of 9600.
